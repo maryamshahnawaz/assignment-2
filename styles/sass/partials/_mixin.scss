@@ -1,0 +1,50 @@
+@mixin headingSize($fontFamily, $fontSize, $lineHeight) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+@mixin elementSize($fontFamily, $fontSize, $letterSpace) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  letter-spacing: $letterSpace;
+}
+
+@mixin Desktop-one {
+  @media (max-width: 1142px) {
+    @content;
+  }
+}
+
+@mixin Desktop-two {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin Ipad-one {
+  @media (max-width: 950px) {
+    @content;
+  }
+}
+@mixin Ipad-two {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin Phone-one {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin Phone-two {
+  @media (max-width: 550px) {
+    @content;
+  }
+}
+@mixin Phone-three {
+  @media (max-width: 484px) {
+    @content;
+  }
+}

@@ -1,0 +1,121 @@
+header {
+  background-image: url(./contact-header.jpg);
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+}
+
+/************************* Form Container ******************************/
+.form-container {
+  display: flex;
+  height: 45vh;
+  @include Phone-one {
+    height: 80vh;
+  }
+}
+.message-container {
+  position: absolute;
+  top: 15%;
+  right: 3%;
+  width: calc(65% - 10rem);
+  margin-left: 10rem;
+  @include Phone-one {
+    width: 70%;
+    right: 15%;
+  }
+  & h2 {
+    @include Ipad-one {
+      font-size: 5rem;
+    }
+    @include Ipad-two {
+      font-size: 3rem;
+    }
+  }
+}
+.myForm {
+  background-color: $secondaryColor;
+  box-shadow: -30px 30px $accentColor;
+  margin: 0 auto;
+  padding: 4rem 6rem;
+  width: 100%;
+  height: 50vh;
+  @include Ipad-one {
+    padding: 4rem;
+  }
+  @include Ipad-one {
+    height: 60vh;
+    box-shadow: -15px 15px $accentColor;
+  }
+}
+.form-box {
+  display: flex;
+  @include Ipad-one {
+    display: block;
+  }
+}
+.myForm input[type='text'],
+.myForm input[type='email'] {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid $accentColor;
+  width: 21vw;
+  @include Ipad-one {
+    width: 95%;
+    padding-top: 2rem;
+  }
+}
+::placeholder {
+  color: $baseFontColor;
+}
+
+.myForm input[type='text'] {
+  margin-right: 5rem;
+}
+
+.contact-message-form textarea {
+  resize: none;
+  width: 95%;
+  height: 20vh;
+  margin-top: 5rem;
+  background: transparent;
+  border: 3px solid $accentColor;
+}
+
+.contact-submit-form button {
+  width: 95%;
+  background: $primaryColor;
+  color: $baseFontColor;
+}
+
+.contact-submit-form button:hover {
+  background-color: #86e0f9;
+  color: #0c1423;
+}
+
+.contact-info-container {
+  width: 35%;
+  margin-top: 4rem;
+  margin-left: 10rem;
+  @include Ipad-one {
+    width: 30%;
+    margin-left: 4rem;
+    font-style: 2rem;
+  }
+  @include Phone-one {
+    width: 100%;
+    margin-top: 35rem;
+  }
+}
+.social-icons i {
+  color: white;
+  font-size: 2.3rem;
+  padding: 1rem;
+}
+.address-container a {
+  text-transform: uppercase;
+  color: white;
+}
+.contact-footer {
+  font-size: 1.6rem;
+  padding: 1rem;
+}

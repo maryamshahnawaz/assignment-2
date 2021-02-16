@@ -1,0 +1,281 @@
+body {
+  background-color: $primaryColor;
+  overflow-x: hidden;
+}
+
+.blog-page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+
+  @include Ipad-two {
+    flex-direction: column;
+  }
+}
+
+// *************************  Right Side Blog Post Section *******************
+.blog-post-section {
+  width: 65%;
+  margin-top: -32.5rem;
+  min-width: 400px;
+
+  @include Ipad-two {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: -30rem;
+    & h2 {
+      font-size: 6rem;
+    }
+  }
+  & h2 {
+    @include Phone-one {
+      font-size: 3rem;
+      margin-top: 10rem;
+      text-align: center;
+    }
+  }
+  @include Phone-one {
+    width: 90%;
+  }
+}
+.right-side-image {
+  box-shadow: -4rem 4rem $accentColor;
+  @include Phone-one {
+    box-shadow: -1rem 1rem $accentColor;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.discovery-section {
+  padding: 7rem 4rem 6rem 5rem;
+  margin-left: -4rem;
+  border-left: 0.5rem solid $accentColor;
+  border-bottom: 0.5rem solid $accentColor;
+  @include Ipad-two {
+    border-right: 3px solid $accentColor;
+  }
+  @include Phone-one {
+    padding: 5rem 2rem 3rem 2rem;
+    border: none;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-left: -1rem;
+  }
+}
+.discovery-section h3 {
+  @include Ipad-one {
+    font-size: 4rem;
+  }
+  @include Phone-one {
+    font-size: 2rem;
+  }
+}
+
+.discovery-section p {
+  @include Phone-three {
+    margin-top: -1rem;
+  }
+}
+
+.discovery-section :nth-child(2) {
+  margin-bottom: 4rem;
+}
+// // *************************  Left Side Blog Post Section *******************
+.side-blog-section {
+  margin-top: 10rem;
+  width: calc(35% - 8rem);
+  margin-right: 8rem;
+  position: relative;
+  @include Ipad-two {
+    width: 80%;
+    margin: 12rem 8rem 7rem 8rem;
+  }
+  @include Phone-one {
+    width: 90%;
+    margin: 13rem 5rem 7rem 3rem;
+  }
+}
+.side-image {
+  position: absolute;
+  top: -1%;
+  left: -3%;
+  @include Ipad-two {
+    width: 70%;
+    top: -10%;
+    left: 10%;
+  }
+  @include Phone-one {
+    display: none;
+  }
+}
+.side-blog-content {
+  padding: 40rem 0 3rem 2.5rem;
+  background-color: $secondaryColor;
+  margin-left: 3rem;
+  @include Desktop-one {
+    padding: 30rem 0 3rem 2.5rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    & h4 {
+      font-size: 2.4rem;
+    }
+  }
+
+  @include Desktop-two {
+    padding: 25rem 0 3rem 2.5rem;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    & h4 {
+      font-size: 2.4rem;
+    }
+  }
+
+  @include Ipad-two {
+    text-align: left;
+    padding: 30rem 2rem 3rem 6rem;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @include Phone-one {
+    display: none;
+  }
+  .side-blog-content h4 {
+    font-size: 2.8rem;
+    margin-top: 1rem;
+  }
+}
+
+// *******************************  Comments Section****************************
+.comments-container {
+  width: 62vw;
+  margin: 6rem 5rem 0 auto;
+  @include Ipad-two {
+    max-width: 100%;
+    width: 80vw;
+  }
+  @include Phone-one {
+    background-color: $secondaryColor;
+    padding: 3rem;
+  }
+  & h3 {
+    @include Ipad-two {
+      font-size: 3.4rem;
+      margin-bottom: 5rem;
+    }
+    @include Phone-one {
+      font-size: 2.6rem;
+      margin-left: -1rem;
+    }
+  }
+}
+.comments-title {
+  display: flex;
+  margin-bottom: 3rem;
+  @include Phone-one {
+    display: block;
+  }
+}
+
+.profile-picture {
+  max-width: 10%;
+  width: 100%;
+  @include Ipad-two {
+    max-width: 20%;
+    width: 100%;
+  }
+  @include Phone-one {
+    margin-bottom: 2rem;
+    margin-left: -1rem;
+  }
+}
+
+.profile-comments {
+  width: calc(90% - 2rem);
+  margin-left: 2rem;
+  margin-top: -1rem;
+  @include Ipad-two {
+    font-size: 1.8rem;
+    margin-left: 1rem;
+    line-height: 1.6;
+  }
+  @include Phone-one {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-left: -1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+//******************************* Form Section ********************************
+
+.contact-section {
+  width: 62vw;
+  margin: 6rem 5rem 0 auto;
+  @include Ipad-two {
+    width: 82vw;
+  }
+
+  .form-box2 {
+    display: flex;
+    width: 100%;
+    @include Phone-one {
+      display: block;
+    }
+  }
+  input[type='text'],
+  input[type='userEmail'] {
+    height: 4rem;
+    width: 28vw;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid $accentColor;
+    margin-bottom: 3rem;
+    @include Ipad-two {
+      width: 38vw;
+    }
+    @include Phone-one {
+      width: 97%;
+    }
+  }
+  input[type='text'] {
+    margin-right: 3rem;
+  }
+}
+::placeholder {
+  color: $baseFontColor;
+}
+
+.blog-message-form textarea[name='userFeedback'] {
+  background: transparent;
+  border: 3px solid #86e0f9;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.blog-message-form textarea {
+  resize: none;
+  width: 97%;
+  height: 25rem;
+  @include Phone-one {
+    width: 98%;
+  }
+}
+.blog-submit-form button {
+  margin-top: 5rem;
+  width: 97%;
+  background-color: $secondaryColor;
+  color: $baseFontColor;
+  margin-bottom: 2rem;
+  @include Phone-one {
+    width: 98%;
+  }
+
+  .blog-submit-form button:hover,
+  .blog-submit-form button:focus {
+    background-color: #86e0f9;
+  }
+}

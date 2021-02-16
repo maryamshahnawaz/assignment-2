@@ -1,0 +1,72 @@
+nav {
+  width: 100%;
+  @include Ipad-two {
+    visibility: hidden;
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 140px;
+  }
+
+  li {
+    padding: 2rem;
+  }
+  li:hover {
+    color: #86e0f9;
+  }
+
+  a {
+    color: white;
+    padding: 10px;
+  }
+
+  a:focus,
+  a:hover {
+    color: #86e0f9;
+  }
+
+  .hamburger-menu {
+    position: relative;
+    display: none;
+    color: white;
+    font-size: 3rem;
+    right: -120px;
+  }
+
+  .dropdown-menu li {
+    float: left;
+    list-style-type: none;
+    position: relative;
+    padding: 7px;
+  }
+
+  .sub-menu {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .sub-menu li {
+    font-size: 2rem;
+    float: none;
+    background-color: #0c1423;
+    display: flex;
+  }
+
+  .dropdown-menu li:hover .sub-menu,
+  .dropdown-menu li:focus-within .sub-menu {
+    height: auto;
+    overflow: auto;
+    top: 45px;
+    right: -120px;
+    flex-direction: column;
+    background-color: #0c1423;
+    border-left: 3px solid #ec5700;
+    border-bottom: 3px solid #ec5700;
+    z-index: 2;
+  }
+}

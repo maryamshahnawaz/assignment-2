@@ -1,0 +1,284 @@
+// ***********************  Sea Section  **********************
+.sea-section {
+  background-color: $primaryColor;
+  height: 100vh;
+  text-align: center;
+
+  .sea-container {
+    max-width: 900px;
+    width: 100%;
+    padding: 45vh 4rem 0 4rem;
+    margin: 0 auto;
+
+    & p {
+      text-align: left;
+      @include Phone-one {
+        font-size: 1.6rem;
+        line-height: 1.7;
+      }
+    }
+    & h3 {
+      @include Phone-one {
+        font-size: 2.8rem;
+      }
+    }
+    & a {
+      font-size: 1.6rem;
+      padding: 0.25rem 0.75rem;
+    }
+  }
+}
+.find-out-more {
+  background-color: #86e0f9;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  color: $primaryColor;
+  &:hover,
+  &:focus {
+    background-color: $secondaryColor;
+    color: white;
+  }
+}
+// ***********************  About Section *************************
+.about-section {
+  background-color: $secondaryColor;
+  @include Ipad-two {
+    height: auto;
+    padding: 5rem 0;
+  }
+
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    @include Ipad-two {
+      display: block;
+    }
+  }
+  .left-side {
+    @include Ipad-two {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .about-section-link {
+    background-color: $primaryColor;
+    color: white;
+    margin-top: 2rem;
+    padding: 0.75rem 2.5rem;
+    &:hover,
+    &:focus {
+      background-color: $accentColor;
+      color: $primaryColor;
+    }
+  }
+
+  .about-left-image,
+  .about-right-image {
+    max-width: 50%;
+    height: 100%;
+    @include Ipad-two {
+      max-width: 100%;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  .about-left-image img {
+    box-shadow: 3rem 3rem $accentColor;
+    width: 100%;
+    margin-top: -30px;
+    @include Ipad-two {
+      margin-top: -80px;
+    }
+  }
+}
+
+.about-right-image img {
+  box-shadow: -3rem 3rem $accentColor;
+  margin-top: 100px;
+  @include Ipad-two {
+    margin-top: 30px;
+  }
+}
+
+.about-left-content,
+.about-right-content {
+  padding-top: 8rem;
+  width: 35%;
+  max-width: 50%;
+  margin: 0 auto;
+  @include Ipad-two {
+    max-width: 100%;
+    width: 70%;
+    margin: 20px auto;
+  }
+  @include Phone-two {
+    font-size: 1.6rem;
+  }
+}
+
+.about-left-content {
+  padding-top: 150px;
+  text-align: right;
+  @include Ipad-two {
+    padding-top: 50px;
+  }
+}
+
+.about-right-content {
+  text-align: left;
+}
+button {
+  &:hover,
+  &:focus {
+    background-color: $primaryColor;
+    color: white;
+  }
+}
+
+// *********************** Contact Section ***********************
+
+.contact-container {
+  background-color: $primaryColor;
+  color: $baseFontColor;
+  padding: 15rem 0;
+  @include Ipad-two {
+    padding: 7rem 0;
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @include Ipad-two {
+      display: block;
+    }
+  }
+  .contact-icons {
+    display: flex;
+    width: 45%;
+    @include Ipad-two {
+      width: 100%;
+      padding: 4rem 1rem;
+    }
+    @include Phone-two {
+      font-size: 1.6rem;
+    }
+  }
+  .contact-icons i {
+    background: #86e0f9;
+    color: #0c1423;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 49px;
+    vertical-align: middle;
+    font-size: 1.8rem;
+  }
+
+  .contact-content {
+    padding: 0 0 2rem 2rem;
+  }
+  i {
+    &:hover,
+    &:focus {
+      background-color: $secondaryColor;
+      color: white;
+    }
+  }
+  .contact-content h4 {
+    font-size: 3rem;
+    @include Phone-two {
+      font-size: 2.6rem;
+    }
+  }
+}
+
+// ************************* Whale section *************************
+
+.whales img {
+  width: 100%;
+  display: block;
+  margin-bottom: 50px;
+}
+
+// ************************ This Month Container *********************
+
+.this-month {
+  background-color: $primaryColor;
+  padding: 7rem 0 10rem 0;
+}
+.month-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.month-image {
+  width: 30%;
+  & img {
+    box-shadow: 3rem 3rem $accentColor;
+  }
+  @include Ipad-two {
+    display: none;
+  }
+}
+.month-content {
+  width: calc(70% - 12rem);
+  margin-left: 12rem;
+  @include Ipad-two {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 1rem;
+  }
+  @include Phone-two {
+    font-size: 1.7rem;
+    line-height: 1.7;
+  }
+}
+.month-content h5 {
+  @include elementSize($fontBarlow, 32px, 1px);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+button {
+  &:hover,
+  &:focus {
+    background-color: $secondaryColor;
+    color: $baseFontColor;
+  }
+}
+
+// ********************** Home Images **************************
+.home-images {
+  background-color: $secondaryColor;
+  padding: 10rem 0;
+
+  .fish-section {
+    display: flex;
+  }
+
+  .home-images-box {
+    width: calc(33% - 2rem);
+    margin: 0 2rem;
+    @include Ipad-two {
+      width: 48%;
+    }
+  }
+  @include Ipad-two {
+    .home-images-box:last-of-type {
+      display: none;
+    }
+  }
+}
+
+footer {
+  background: $accentColor;
+  color: #0c1423;
+  text-align: center;
+  padding: 1rem;
+  @include Phone-two {
+    font-size: 1.6rem;
+  }
+}

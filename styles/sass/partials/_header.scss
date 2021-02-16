@@ -1,0 +1,116 @@
+h1 {
+  @include headingSize($fontBarlow, 138px, 126px);
+  text-transform: uppercase;
+}
+
+h2 {
+  @include headingSize($fontBarlow, 80px, 92px);
+  text-transform: uppercase;
+}
+
+h3 {
+  @include elementSize($fontBarlow, 42px, 1px);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+h4 {
+  @include elementSize($fontBarlow, 32px, 1px);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+nav {
+  @include headingSize($fontBarlow, 20px, 29px);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+button {
+  @include headingSize($fontBarlow, 20px, 32px);
+  letter-spacing: 1px;
+  background-color: $accentColor;
+  padding: 10px 15px;
+  border: none;
+  margin-top: 30px;
+}
+
+body {
+  @include headingSize($fontLato, 20px, 32px);
+  color: white;
+}
+
+.header-section-img {
+  background-image: url(../assets/header-image.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 65vh;
+  & h1 {
+    padding-top: 15vh;
+    @include Ipad-one {
+      font-size: 8rem;
+      line-height: 8rem;
+    }
+
+    @include Phone-one {
+      font-size: 6rem;
+      line-height: 6rem;
+      width: 100vw;
+    }
+  }
+
+  .fashion {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    & i {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .home-box-header-img {
+    position: absolute;
+    right: 0;
+    width: 65%;
+    top: 30%;
+
+    @include Phone-one {
+      top: 45%;
+    }
+  }
+  .home-box-header-img img {
+    width: 100%;
+  }
+}
+
+.blog-page {
+  background-image: url(../assets/blog-header.jpg);
+  display: flex;
+  @include Desktop-two {
+    height: 65vh;
+  }
+}
+
+.contact-page {
+  background-image: url(../assets/contact-header.jpg);
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: $primaryColor;
+  color: white;
+}
+
+.skip-link:focus {
+  font-size: 2.5rem;
+  top: 10px;
+  left: 0;
+  padding: 10px;
+  box-shadow: 7px 7px $accentColor;
+}
