@@ -1,5 +1,6 @@
-const fashionIcons = document.querySelector('.fashion');
-fashionIcons.addEventListener('click',function(e){
-console.log(e.target);
 
+const menuIcon = document.getElementById('icon');
+menuIcon.addEventListener('click',function(){
+  const ulElement = document.querySelector('ul');
+  ulElement.classList.toggle('show');
 })

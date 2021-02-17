@@ -1,72 +1,59 @@
 nav {
+  height: 80px;
   width: 100%;
+  line-height: 80px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 40px;
+
   @include Ipad-two {
-    visibility: hidden;
-  }
-
-  ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    margin-right: 140px;
-  }
-
-  li {
-    padding: 2rem;
-  }
-  li:hover {
-    color: #86e0f9;
-  }
-
-  a {
-    color: white;
-    padding: 10px;
-  }
-
-  a:focus,
-  a:hover {
-    color: #86e0f9;
-  }
-
-  .hamburger-menu {
-    position: relative;
-    display: none;
-    color: white;
-    font-size: 3rem;
-    right: -120px;
-  }
-
-  .dropdown-menu li {
-    float: left;
-    list-style-type: none;
-    position: relative;
-    padding: 7px;
-  }
-
-  .sub-menu {
-    position: absolute;
-    height: 0;
-    overflow: hidden;
-    padding: 0;
-  }
-
-  .sub-menu li {
-    font-size: 2rem;
-    float: none;
-    background-color: #0c1423;
-    display: flex;
-  }
-
-  .dropdown-menu li:hover .sub-menu,
-  .dropdown-menu li:focus-within .sub-menu {
-    height: auto;
-    overflow: auto;
-    top: 45px;
-    right: -120px;
-    flex-direction: column;
-    background-color: #0c1423;
-    border-left: 3px solid #ec5700;
-    border-bottom: 3px solid #ec5700;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: $primaryColor;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.3s ease;
     z-index: 2;
+  }
+}
+nav li {
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 80px;
+  @include Ipad-two {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+}
+nav a {
+  color: white;
+  padding: 7px 10px;
+}
+
+a.active,
+a:hover {
+  color: $accentColor;
+}
+nav #icon {
+  font-size: 30px;
+  line-height: 80px;
+  float: right;
+  margin-right: 40px;
+  display: none;
+  @include Ipad-two {
+    display: block;
+
+    color: white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul.show {
+    left: 0;
   }
 }

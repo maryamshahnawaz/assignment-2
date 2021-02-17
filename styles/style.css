@@ -238,6 +238,10 @@ p {
   padding: 0;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -407,89 +411,74 @@ body {
 }
 
 nav {
+  height: 80px;
   width: 100%;
-}
-
-@media (max-width: 768px) {
-  nav {
-    visibility: hidden;
-  }
+  line-height: 80px;
 }
 
 nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  list-style: none;
-  margin-right: 140px;
+  float: right;
+  margin-right: 40px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #0c1423;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
 }
 
 nav li {
-  padding: 2rem;
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 80px;
 }
 
-nav li:hover {
-  color: #86e0f9;
+@media (max-width: 768px) {
+  nav li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
 }
 
 nav a {
   color: white;
-  padding: 10px;
+  padding: 7px 10px;
 }
 
-nav a:focus,
-nav a:hover {
+a.active,
+a:hover {
   color: #86e0f9;
 }
 
-nav .hamburger-menu {
-  position: relative;
+nav #icon {
+  font-size: 30px;
+  line-height: 80px;
+  float: right;
+  margin-right: 40px;
   display: none;
-  color: white;
-  font-size: 3rem;
-  right: -120px;
 }
 
-nav .dropdown-menu li {
-  float: left;
-  list-style-type: none;
-  position: relative;
-  padding: 7px;
+@media (max-width: 768px) {
+  nav #icon {
+    display: block;
+    color: white;
+  }
 }
 
-nav .sub-menu {
-  position: absolute;
-  height: 0;
-  overflow: hidden;
-  padding: 0;
-}
-
-nav .sub-menu li {
-  font-size: 2rem;
-  float: none;
-  background-color: #0c1423;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-nav .dropdown-menu li:hover .sub-menu,
-nav .dropdown-menu li:focus-within .sub-menu {
-  height: auto;
-  overflow: auto;
-  top: 45px;
-  right: -120px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #0c1423;
-  border-left: 3px solid #ec5700;
-  border-bottom: 3px solid #ec5700;
-  z-index: 2;
+@media screen and (max-width: 768px) {
+  nav ul.show {
+    left: 0;
+  }
 }
 
 .sea-section {
